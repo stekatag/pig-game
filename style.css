@@ -176,7 +176,7 @@ main {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 69em) {
+@media (min-width: 64em) {
   .btn {
     left: 50%;
   }
