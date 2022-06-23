@@ -102,7 +102,7 @@ main {
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
-  left: 50%;
+  /* left: 50%; */
   transform: translateX(-50%);
   color: #444;
   background: none;
@@ -140,7 +140,7 @@ main {
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
+  transform: translate(-50%, 2px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
@@ -175,11 +175,19 @@ main {
 }
 
 /* MEDIA QUERIES */
+
+@media (min-width: 69em) {
+  .btn {
+    left: 50%;
+  }
+}
+
 /* TABLETS */
 @media (max-width: 64em) {
   html {
     font-size: 50%;
   }
+
   main {
     margin: 4.8rem 2.4rem;
     height: auto;
@@ -204,7 +212,11 @@ main {
     top: 34rem;
   }
 
-  .btn--new {
+  .btn:active {
+    transform: translate(0%, 2px);
+  }
+
+  /* .btn--new {
     top: 36.5rem;
     left: 20%;
   }
@@ -220,6 +232,25 @@ main {
     top: 43rem;
     left: 67%;
     padding: 0.7rem 1.6rem;
+  } */
+
+  .btn--new {
+    right: 0;
+    transform: translateX(0);
+    margin-right: 20px;
+    top: 20px;
+  }
+  .btn--roll {
+    left: 0;
+    margin-left: 20px;
+    top: 48.5%;
+    transform: translateY(-50%);
+  }
+  .btn--hold {
+    right: 0;
+    margin-right: 20px;
+    top: 48.5%;
+    transform: translateY(-50%);
   }
 }
 
@@ -238,19 +269,23 @@ main {
     padding: 1.6rem;
   }
 
-  .btn--new {
+  /* .btn--new {
     top: 2rem;
     left: 17%;
-  }
+  } */
 
-  .btn--roll {
-    /* transform: translateX(-50%); */
-    left: 3%;
-  }
-
-  .btn--hold {
+  /* .btn--hold {
     top: 36.5rem;
     left: 79%;
+  } */
+
+  .btn {
+    padding: 0.7rem 1.6rem;
+  }
+
+  .btn--roll,
+  .btn--hold {
+    top: 50%;
   }
 }
 
@@ -261,10 +296,41 @@ main {
   }
 
   .btn--hidden {
-    display: block;
+    display: inline-block;
   }
 
   .btn:not(.btn--hidden) {
     display: none;
+  }
+
+  .btn--new {
+    right: 0;
+    transform: translateX(0);
+    margin-right: 20px;
+    top: 20px;
+  }
+  .btn--roll {
+    left: 0;
+    margin-left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btn--hold {
+    right: 0;
+    margin-right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .dice {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* .current {
+    margin-bottom: 2.4rem;
+  } */
+
+  .btn::first-letter {
+    margin-right: 0;
   }
 }
