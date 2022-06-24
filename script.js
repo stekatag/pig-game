@@ -13,6 +13,11 @@ const btnNew = document.querySelectorAll(".btn--new");
 const btnRoll = document.querySelectorAll(".btn--roll");
 const btnHold = document.querySelectorAll(".btn--hold");
 
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnsShowModal = document.querySelectorAll(".btn--modal");
+
 let scores, currentScore, activePlayer, playing;
 
 // Starting conditions
@@ -101,3 +106,27 @@ for (let i = 0; i < btnHold.length; i++) {
 for (let i = 0; i < btnNew.length; i++) {
   btnNew[i].addEventListener("click", init);
 }
+
+// Modal window for the rules
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+for (let i = 0; i < btnsShowModal.length; i++) {
+  btnsShowModal[i].addEventListener("click", openModal);
+}
+
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});

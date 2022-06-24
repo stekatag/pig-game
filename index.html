@@ -33,7 +33,34 @@
       <button class="btn btn--roll btn--hidden">🎲</button>
       <button class="btn btn--hold">📥 Hold</button>
       <button class="btn btn--hold btn--hidden">📥</button>
+      <button class="btn btn--modal">📋 Rules</button>
+      <button class="btn btn--modal btn--hidden">📋</button>
     </main>
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="modal-header">Pig Game Rules 📋</h1>
+      <ul>
+        <li class="modal-text">The game has 2 players, playing in rounds</li>
+        <li class="modal-text">
+          In each turn, a player rolls a dice as many times as he wishes. Each
+          result get added to his ROUND score
+        </li>
+        <li class="modal-text">
+          BUT, if the player rolls a 1, all his ROUND score gets lost. After
+          that, it's the next player's turn
+        </li>
+        <li class="modal-text">
+          The player can choose to 'Hold', which means that his ROUND score gets
+          added to his GLOBAL score. After that, it's the next player's turn
+        </li>
+        <li class="modal-text">
+          The first player to reach 100 points on GLOBAL score wins the game.
+        </li>
+      </ul>
+    </div>
+    <div class="overlay hidden"></div>
+
     <script src="script.js"></script>
   </body>
 </html>
