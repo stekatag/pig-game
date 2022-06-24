@@ -22,6 +22,6 @@ Working with XML can be done in Eclipse or Netbeans
 
 This game was developed using javascript math.random that draws numbers randomly and using Document Query Selector
 
-## Copyright(c) 2022
+## Copyright © 2022
 
 This page is made for learning purposes only. Copyright © 2022 Stefan Gogov. All rights reserved.
