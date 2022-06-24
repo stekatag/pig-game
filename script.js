@@ -40,6 +40,7 @@ const init = function () {
 };
 init();
 
+// If the active player is 0 (player 1), then set the active player to 1 (player 2), otherwise set the active player to 0
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
@@ -74,6 +75,7 @@ for (let i = 0; i < btnRoll.length; i++) {
 }
 
 // Implementing holding dice functionality
+// This is a for loop that is iterating through the btnHold array.
 for (let i = 0; i < btnHold.length; i++) {
   btnHold[i].addEventListener("click", function () {
     if (playing) {
