@@ -1,6 +1,7 @@
 # 🐷 Pig Game
 
 Pig-game (ludo) is a classic board game played between friends and family. Play the dice game of kings! Recall your childhood!
+Check out the game [here](https://stekatag.github.io/pig-game)
 
 ## 📃 Game rules
 
